@@ -13,13 +13,19 @@
 //						returns to the main menu.
 
 
-
 #include <stdio.h>
 
 
+#define SUCCESS				0
+#define FAILUTE				-1
+#define USERINPUTLENGTH		121
 
-#define SUCCESS 0
-#define FAILUTE -1
+
+#pragma warning(disable: 4996)
+
+
+int getNum(void);
+
 
 int main(void)
 {
@@ -32,5 +38,28 @@ int main(void)
 	printf("5 - Generate Grocery List\n");
 	printf("6 - Exit Program\n");
 
+	printf("DEBUG - %d", getNum());
+
 	return SUCCESS;
+}
+
+
+//	FUNCTION		:	getNum()
+//	DESCRIPTION		:	This function retreives the number entered by the user. If the user does not enter a positive integer, it returns -1. Otherwise, 
+//						it returns the number. ***This function is taken from Carlo Scro's SENG 1000 course at Conestoga College***
+//	PARAMETERS		:	N/A
+//	RETURN			:	If the user enters a positive integer, return that integer. Otherwise return -1.
+int getNum(void)
+{
+	char record[USERINPUTLENGTH] = { 0 };
+	int number = 0;
+
+	fgets(record, USERINPUTLENGTH, stdin);
+
+	if (sscanf(record, "%d", &number) != 1)
+	{
+		number = -1;
+	}
+
+	return number;
 }
