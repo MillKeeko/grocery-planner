@@ -14,6 +14,7 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
 
 #define SUCCESS				0
@@ -25,21 +26,83 @@
 
 
 int getNum(void);
+int createNewRecipe(void);
+int browseRecipe(void);
+int enterMealPlan(void);
+int generateMealPlan(void);
+int generateGroceryList(void);
 
 
 int main(void)
 {
-	//	Main Menu
-	printf("Please enter one of the following options:\n");
-	printf("1 - Create New Recipe\n");
-	printf("2 - Read a Recipe\n");
-	printf("3 - Enter a Meal Plan\n");
-	printf("4 - Generate Meal Plan\n");
-	printf("5 - Generate Grocery List\n");
-	printf("6 - Exit Program\n");
+	bool loopBool = true;
 
-	printf("DEBUG - %d", getNum());
+	while (loopBool)
+	{
+		system("clear");
 
+		//	Main Menu
+		printf("Please enter one of the following options:\n");
+		printf("1 - Create New Recipe\n");
+		printf("2 - Read a Recipe\n");
+		printf("3 - Enter a Meal Plan\n");
+		printf("4 - Generate Meal Plan\n");
+		printf("5 - Generate Grocery List\n");
+		printf("6 - Exit Program\n");
+
+		switch (getNum())
+		{
+			case 1:
+				createNewRecipe();
+				break;
+			case 2:
+				browseRecipe();
+				break;
+			case 3:
+				enterMealPlan();
+				break;
+			case 4:
+				generateMealPlan();
+				break;
+			case 5:
+				generateGroceryList();
+				break;
+			case 6:
+				loopBool = false;
+				break;
+		}
+	}
+
+	return SUCCESS;
+}
+
+
+int generateGroceryList(void)
+{
+	return SUCCESS;
+}
+
+
+int generateMealPlan(void)
+{
+	return SUCCESS;
+}
+
+
+int enterMealPlan(void)
+{
+	return SUCCESS;
+}
+
+
+int browseRecipe(void)
+{
+	return SUCCESS;
+}
+
+
+int createNewRecipe(void)
+{
 	return SUCCESS;
 }
 
