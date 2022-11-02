@@ -1,6 +1,6 @@
 //	FILE			:	main.cpp
 //	PROJECT			:	Meal Planning and Grocery List
-//	PROGRAMMER		:	William Anderson - 8660310
+//	PROGRAMMER		:	William Anderson
 //	FIRST VERSION	:	2022-11-02
 //	DESCRIPTION		:	This program presents a main menu to the user with the following options: Create New Recipe, Read Recipe, and Create 5-day 
 //						Meal Plan. When creating a new recipe the user is asked to input the recipe name, and to list ingredients by entering: an
@@ -13,24 +13,13 @@
 //						returns to the main menu.
 
 
+#include "main.h"
+#include "Recipe.h"
+#include "MealPlan.h"
+
+
 #include <stdio.h>
 #include <stdlib.h>
-
-
-#define SUCCESS				0
-#define FAILUTE				-1
-#define USERINPUTLENGTH		121
-
-
-#pragma warning(disable: 4996)
-
-
-int getNum(void);
-int createNewRecipe(void);
-int browseRecipe(void);
-int enterMealPlan(void);
-int generateMealPlan(void);
-int generateGroceryList(void);
 
 
 int main(void)
@@ -39,12 +28,12 @@ int main(void)
 
 	while (loopBool)
 	{
-		system("clear");
+		system("cls");
 
 		//	Main Menu
 		printf("Please enter one of the following options:\n");
 		printf("1 - Create New Recipe\n");
-		printf("2 - Read a Recipe\n");
+		printf("2 - Browse Recipes\n");
 		printf("3 - Enter a Meal Plan\n");
 		printf("4 - Generate Meal Plan\n");
 		printf("5 - Generate Grocery List\n");
@@ -53,56 +42,31 @@ int main(void)
 		switch (getNum())
 		{
 			case 1:
-				createNewRecipe();
+				//	Create recipe by entering an ingredient list
 				break;
+
 			case 2:
-				browseRecipe();
+				//	Browse recipes and dig into their ingredient lists
 				break;
+
 			case 3:
-				enterMealPlan();
+				//	Enter meal plan with existing recipes
 				break;
+
 			case 4:
-				generateMealPlan();
+				//	Generate meal plan with existing recipes
 				break;
+
 			case 5:
-				generateGroceryList();
+				//	Generate grocery list for meal plan by removing ingredients the user already has
 				break;
+
 			case 6:
 				loopBool = false;
 				break;
 		}
 	}
 
-	return SUCCESS;
-}
-
-
-int generateGroceryList(void)
-{
-	return SUCCESS;
-}
-
-
-int generateMealPlan(void)
-{
-	return SUCCESS;
-}
-
-
-int enterMealPlan(void)
-{
-	return SUCCESS;
-}
-
-
-int browseRecipe(void)
-{
-	return SUCCESS;
-}
-
-
-int createNewRecipe(void)
-{
 	return SUCCESS;
 }
 
