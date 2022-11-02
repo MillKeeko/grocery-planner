@@ -25,19 +25,29 @@
 int main(void)
 {
 	bool loopBool = true;
+	bool invalidInput = false;
 
 	while (loopBool)
 	{
 		system("cls");
 
+		if (invalidInput == true)
+		{
+			invalidInput = false;
+			printf("Please enter a menu choice from 1 to 6.\n");
+			printf("\n");
+		}
+
 		//	Main Menu
 		printf("Please enter one of the following options:\n");
-		printf("1 - Create New Recipe\n");
-		printf("2 - Browse Recipes\n");
-		printf("3 - Enter a Meal Plan\n");
-		printf("4 - Generate Meal Plan\n");
-		printf("5 - Generate Grocery List\n");
-		printf("6 - Exit Program\n");
+		printf("\t1 - Create New Recipe\n");
+		printf("\t2 - Browse Recipes\n");
+		printf("\t3 - Enter a Meal Plan\n");
+		printf("\t4 - Generate Meal Plan\n");
+		printf("\t5 - Generate Grocery List\n");
+		printf("\t6 - Exit Program\n");
+		printf("\n");
+		printf("Choice: ");
 
 		switch (getNum())
 		{
@@ -63,6 +73,10 @@ int main(void)
 
 			case 6:
 				loopBool = false;
+				break;
+
+			default:
+				invalidInput = true;
 				break;
 		}
 	}
