@@ -8,3 +8,22 @@
 
 
 #include <stdio.h>
+
+
+//  METHOD			:	MealPlan()
+//	DESCRIPTION		:	This method is a constructor.
+//	PARAMETERS		:	N/A
+//	RETURN			:	N/A
+MealPlan::MealPlan(void)
+{
+
+}
+
+//  METHOD			:	MealPlan()
+//	DESCRIPTION		:	This method is a destructor.
+//	PARAMETERS		:	N/A
+//	RETURN			:	N/A
+MealPlan::~MealPlan(void)
+{
+
+}

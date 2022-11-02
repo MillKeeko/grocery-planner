@@ -13,4 +13,9 @@
 
 class Recipe
 {
+	//	Constructors
+	Recipe(void);
+
+	//	Destructors
+	~Recipe(void);
 };

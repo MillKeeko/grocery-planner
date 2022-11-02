@@ -13,5 +13,10 @@
 
 class MealPlan
 {
+	//	Constructors
+	MealPlan(void);
+
+	//	Destructors
+	~MealPlan(void);
 };
 

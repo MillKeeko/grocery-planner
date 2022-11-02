@@ -9,3 +9,22 @@
 
 #include <stdio.h>
 
+
+//  METHOD			:	Recipe()
+//	DESCRIPTION		:	This method is a constructor.
+//	PARAMETERS		:	N/A
+//	RETURN			:	N/A
+Recipe::Recipe(void)
+{
+	
+}
+
+//  METHOD			:	Recipe()
+//	DESCRIPTION		:	This method is a destructor.
+//	PARAMETERS		:	N/A
+//	RETURN			:	N/A
+Recipe::~Recipe(void)
+{
+
+}
+

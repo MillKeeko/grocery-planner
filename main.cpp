@@ -24,10 +24,10 @@
 
 int main(void)
 {
-	bool loopBool = true;
+	bool returnToMenu = true;
 	bool invalidInput = false;
 
-	while (loopBool)
+	while (returnToMenu)
 	{
 		system("cls");
 
@@ -72,7 +72,7 @@ int main(void)
 				break;
 
 			case 6:
-				loopBool = false;
+				returnToMenu = false;
 				break;
 
 			default:
