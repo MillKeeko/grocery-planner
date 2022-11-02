@@ -64,7 +64,7 @@ int main(void)
 				break;
 
 			case 4:
-				//	Generate meal plan with existing recipes
+				//	Generate random meal plan with existing recipes
 				break;
 
 			case 5:

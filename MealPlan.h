@@ -18,5 +18,15 @@ class MealPlan
 
 	//	Destructors
 	~MealPlan(void);
+
+	//	Accessors
+
+	//	Mutators
+
+	//	Methods
+		//	EnterMealPlan()
+		//	GenerateMealPlan()
+		//	DisplayGroceryList()
+
 };
 

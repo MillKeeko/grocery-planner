@@ -18,4 +18,16 @@ class Recipe
 
 	//	Destructors
 	~Recipe(void);
+
+	//	Accessors
+
+	//	Mutators
+
+	//	Methods
+	
+		//	CreateNew()
+		
+		//	DisplayAll()
+		
+		//	ReadIngredients(string recipe)
 };
