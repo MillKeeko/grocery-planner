@@ -6,15 +6,20 @@
 
 #include "Ingredient.h"
 #include <stdio.h>
+#include <string.h>
 
 
 //  METHOD			:	Ingredient()
-//	DESCRIPTION		:	This method is a constructor.
+//	DESCRIPTION		:	This method is a default constructor that sets data members to meaningless values.
 //	PARAMETERS		:	N/A
 //	RETURN			:	N/A
 Ingredient::Ingredient(void)
 {
-
+	name = NULL;
+	uom = NULL;
+	amount = 0;
+	nameCopy = NULL;
+	uomCopy = NULL;
 }
 
 //  METHOD			:	~Ingredient()
@@ -27,21 +32,23 @@ Ingredient::~Ingredient(void)
 }
 
 //  METHOD			:	GetName()
-//	DESCRIPTION		:	This method is an accessor.
+//	DESCRIPTION		:	This method is an accessor for the name data member.
 //	PARAMETERS		:	N/A
-//	RETURN			:	N/A
+//	RETURN			:	char* - a pointer to an address containing name's value, but not a pointer to name's address.
 char* Ingredient::GetName(void)
 {
-
+	strcpy(nameCopy, name);		// Should I use strcpy_s???
+	return nameCopy;
 }
 
 //  METHOD			:	Ingredient()
-//	DESCRIPTION		:	This method is an accessor.
+//	DESCRIPTION		:	This method is an accessor for the unit of measurement data member.
 //	PARAMETERS		:	N/A
-//	RETURN			:	N/A
+//	RETURN			:	char* - a pointer to an address containing the uom's value, but not a pointer to the uom's address.
 char* Ingredient::GetUOM(void)
 {
-
+	strcpy(uomCopy, uom);
+	return uomCopy;
 }
 
 //  METHOD			:	Ingredient()
@@ -50,7 +57,7 @@ char* Ingredient::GetUOM(void)
 //	RETURN			:	N/A
 int	Ingredient::GetAmount(void)
 {
-
+	return amount;
 }
 
 //  METHOD			:	Ingredient()

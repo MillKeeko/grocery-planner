@@ -10,16 +10,20 @@
 class Ingredient
 {
 private:
-	//	Data Members
+	//	Main Data Members
 	char*	name;
 	char*	uom;			//	Unit of measurement
 	int		amount;		
+
+	//	Auxiliary Data Members
+	char*	nameCopy;
+	char*	uomCopy;
 
 public:
 	//	Constructors
 	Ingredient(void);
 
-	//	Destructors
+	//	Destructor
 	~Ingredient(void);
 
 	//	Accessors
