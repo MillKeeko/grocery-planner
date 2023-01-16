@@ -1,18 +1,44 @@
 //	FILE			:	Ingredient.h
-//	PROJECT			:	Grocery Planner
+//	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
-//	
-//	Class Description:	An Ingredient contains three main data members: a name, amount, and unit of measurement. This class allow each of these data
-//						members to be set and retrieved. 
+//	PROJECT START	:	2022-11-02
+//	FIRST VERSION	:
+
+#pragma once
 
 
-#ifndef _INGREDIENT_H
-#define _INGREDIENT_H
 
 class Ingredient
 {
+private:
+	//	Main Data Members
+	char*	name;
+	char*	uom;			//	Unit of measurement
+	int		amount;		
+	bool	staple;
+
+	//	Auxiliary Data Members
+	char*	nameCopy;
+	char*	uomCopy;
+
+public:
+	//	Constructors
+	Ingredient(void);
+
+	//	Destructor
+	~Ingredient(void);
+
+	//	Accessors
+	char*	GetName(void);
+	char*	GetUOM(void);
+	int		GetAmount(void);
+
+	//	Mutators
+	int		SetName(void);
+	int		SetUOM(void);
+	int		SetAmount(void);
+
+
+
+	//	Overload the add and subtract operators to correctly add ingredient amounts
 };
-
-#endif
-
-

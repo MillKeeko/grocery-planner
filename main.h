@@ -1,11 +1,21 @@
 //	FILE			:	main.h
-//	PROJECT			:	Grocery Planner
+//	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
-
-
-#ifndef _MAIN_H
-#define _MAIN_H
+//	PROJECT START	:	2022-11-02
+//	FIRST VERSION	:
 
 
 
-#endif
+#pragma once
+
+
+#define SUCCESS				0
+#define FAILUTE				-1
+#define USERINPUTLENGTH		121
+
+
+#pragma warning(disable: 4996)
+
+
+int getNum(void);
+
