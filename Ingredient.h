@@ -1,7 +1,8 @@
 //	FILE			:	Ingredient.h
-//	PROJECT			:	Dinner List
+//	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
-//	FIRST VERSION	:	2022-11-02
+//	PROJECT START	:	2022-11-02
+//	FIRST VERSION	:
 
 #pragma once
 
@@ -14,6 +15,7 @@ private:
 	char*	name;
 	char*	uom;			//	Unit of measurement
 	int		amount;		
+	bool	staple;
 
 	//	Auxiliary Data Members
 	char*	nameCopy;
@@ -35,5 +37,9 @@ public:
 	int		SetName(void);
 	int		SetUOM(void);
 	int		SetAmount(void);
+
+
+
+	//	Overload the add and subtract operators to correctly add ingredient amounts
 };
 

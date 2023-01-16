@@ -1,7 +1,8 @@
 //	FILE			:	Ingredient.cpp
-//	PROJECT			:	Dinner List
+//	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
-//	FIRST VERSION	:	2022-11-02
+//	PROJECT START	:	2022-11-02
+//	FIRST VERSION	:
 
 
 #include "Ingredient.h"
@@ -20,6 +21,7 @@ Ingredient::Ingredient(void)
 	amount = 0;
 	nameCopy = NULL;
 	uomCopy = NULL;
+	staple = NULL;
 }
 
 //  METHOD			:	~Ingredient()

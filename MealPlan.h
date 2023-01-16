@@ -1,7 +1,8 @@
 //	FILE			:	MealPlan.h
-//	PROJECT			:	Meal Planning and Grocery List
+//	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
-//	FIRST VERSION	:	2022-11-02
+//	PROJECT START	:	2022-11-02
+//	FIRST VERSION	:
 
 
 #pragma once
