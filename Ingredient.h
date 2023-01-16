@@ -42,4 +42,3 @@ public:
 
 	//	Overload the add and subtract operators to correctly add ingredient amounts
 };
-

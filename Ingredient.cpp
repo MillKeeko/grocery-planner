@@ -88,3 +88,4 @@ int	Ingredient::SetAmount(void)
 {
 
 }
+
