@@ -5,19 +5,30 @@
 //	FIRST VERSION	:
 
 
+#include "Ingredient.h"
+
+
 #pragma once
 
 
 #define SUCCESS				0
 #define FAILUTE				-1
+#define MAXINGREDIENTS		25
+
 
 
 class Recipe
 {
-	//	Data Members
-		//	Number of servings
+private:
+	//	Main data members
+	char*	name;
+	int		servings;
+	Ingredient ingredients[MAXINGREDIENTS];
 
+	//	Auxilliary data members
+	char* nameCopy;
 
+public:
 	//	Constructors
 	Recipe(void);
 
@@ -25,18 +36,16 @@ class Recipe
 	~Recipe(void);
 
 	//	Accessors
+	char*	GetName();
+	int		GetServings();
 
 	//	Mutators
 
 	//	Methods
 	
-		//	CreateNew()
+	int		CreateNew(void);
 		
-		//	DisplayAll()
+	int		DisplayAll(void);
 		
-		//	ReadIngredients(string recipe)
-
-
-
-	
+	int		ReadIngredients(char* recipeName);
 };
