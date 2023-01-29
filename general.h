@@ -11,11 +11,12 @@
 
 #define SUCCESS				0
 #define FAILUTE				-1
-#define INPUTLENGTH			121
+#define PROMPTLENGTH			121
 
 
 #pragma warning(disable: 4996)
 
 
-int getNum(void);
+int		getNum(void);
+char*	getStr(void);
 

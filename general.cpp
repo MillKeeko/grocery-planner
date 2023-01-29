@@ -6,8 +6,6 @@
 
 
 #include "general.h"
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,10 +14,20 @@
 //	DESCRIPTION		:	Retrieves the string entered by the user. If the user does not enter a valid string, 
 //						-1 is returned as an error. 
 //	PARAMETERS		:	N/A
-//	RETURN			:	If the user enters a valid string, return 0. Otherwise return -1.
-int getStr(void)
+//	RETURN			:	If the user enters a valid string, return . Otherwise return -1.
+char* getStr(void)
 {
-	return 0;
+	char input[PROMPTLENGTH] = { 0 };
+	char* retCode = NULL;
+
+	fgets(input, PROMPTLENGTH, stdin);
+
+	if (sscanf(input, "%s", retCode) != 1)
+	{
+		retCode = NULL;;
+	}
+
+	return retCode;
 }
 
 
@@ -31,10 +39,10 @@ int getStr(void)
 //	RETURN			:	If the user enters a positive integer, return that integer. Otherwise return -1.
 int getNum(void)
 {
-	char record[INPUTLENGTH] = { 0 };
+	char record[PROMPTLENGTH] = { 0 };
 	int number = 0;
 
-	fgets(record, INPUTLENGTH, stdin);
+	fgets(record, PROMPTLENGTH, stdin);
 
 	if (sscanf(record, "%d", &number) != 1)
 	{
