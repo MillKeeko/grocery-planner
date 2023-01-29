@@ -14,7 +14,10 @@
 #define SUCCESS				0
 #define FAILUTE				-1
 #define MAXINGREDIENTS		25
+#define INPUTLENGTH			121
 
+
+#pragma warning(disable: 4996)
 
 
 class Recipe

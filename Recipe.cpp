@@ -9,7 +9,10 @@
 
 
 #include <stdio.h>
-#include <string.h>
+#include <string>
+
+
+using namespace std;
 
 
 //  METHOD			:	Recipe()
@@ -58,6 +61,12 @@ int Recipe::GetServings(void)
 //	RETURN			:	N/A
 int Recipe::CreateNew(void)
 {
+	char* name = NULL;
+
+	printf("Please enter the name of your new recipe: ");
+
+	return 0;
+	
 	//	Get name of new recipe from user and create text file with that name
 	//	Open (or create if first recipe) RecipeList.txt
 		//	Write line to file: <RecipeName>.txt 
@@ -79,7 +88,7 @@ int Recipe::DisplayAll(void)
 }
 			
 
-int ReadIngredients(char* recipeName)
+int Recipe::ReadIngredients(char* recipeName)
 {
 	// Open <recipeName>.txt
 	//	Display the ingredients by replacing the first comma with 2 tabs and deleting the second comma

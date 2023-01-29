@@ -1,4 +1,4 @@
-//	FILE			:	main.h
+//	FILE			:	general.h
 //	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
 //	PROJECT START	:	2022-11-02
@@ -11,7 +11,7 @@
 
 #define SUCCESS				0
 #define FAILUTE				-1
-#define USERINPUTLENGTH		121
+#define INPUTLENGTH			121
 
 
 #pragma warning(disable: 4996)
