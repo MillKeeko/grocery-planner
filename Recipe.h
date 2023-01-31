@@ -39,10 +39,12 @@ public:
 	~Recipe(void);
 
 	//	Accessors
-	char*	GetName();
-	int		GetServings();
+	char*	GetName(void);
+	int		GetServings(void);
 
 	//	Mutators
+	int		SetName(void);
+	int		SetServings(void);
 
 	//	Methods
 	

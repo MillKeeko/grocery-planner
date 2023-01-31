@@ -18,5 +18,4 @@
 
 
 int		getNum(void);
-char*	getStr(void);
 
