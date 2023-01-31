@@ -55,8 +55,10 @@ int main(void)
 		{
 			case 1:
 				//	Create recipe by entering an ingredient list
-				Recipe* recipe = new Recipe();
+			{
+				Recipe* recipe = new Recipe;
 				recipe->CreateNew();
+			}
 				break;
 
 			case 2:

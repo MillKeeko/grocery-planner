@@ -18,4 +18,5 @@
 
 
 int		getNum(void);
+void	clearCR(char buf[]);
 

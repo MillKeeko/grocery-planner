@@ -20,7 +20,9 @@ using namespace std;
 //	RETURN			:	N/A
 Recipe::Recipe(void)
 {
-	
+	name = NULL;
+	nameCopy = NULL;
+	servings = 0;
 }
 
 
@@ -63,7 +65,7 @@ int Recipe::GetServings(void)
 //	DESCRIPTION		:	Mutator for the name data member.
 //	PARAMETERS		:	N/A
 //	RETURN			:
-int		SetName(void)
+int	Recipe::SetName(void)
 {
 	return 0;
 }
@@ -73,7 +75,7 @@ int		SetName(void)
 //	DESCRIPTION		:	Mutator for the servings data member.
 //	PARAMETERS		:	N/A
 //	RETURN			:
-int		SetServings(void)
+int	Recipe::SetServings(void)
 {
 	return 0;
 }
@@ -95,6 +97,7 @@ int Recipe::CreateNew(void)
 	//	Get name of new recipe from user 
 	printf("Please enter the name of your new recipe: ");
 	fgets(filename, PROMPTLENGTH, stdin);
+	clearCR(filename);
 
 	//	Create a text file with that name
 	strcat(filename, extension);

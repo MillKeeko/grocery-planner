@@ -8,6 +8,24 @@
 #include "general.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string>
+
+//  FUNCTION		:	void clearCR()
+//	DESCRIPTION		:	This function checks whether there is a '\n' at 
+//						the end of a string. If there is, it is replaced 
+//						with '\0'. ***This function is taken from Carlo 
+//						Scro's SENG 1000 course at Conestoga College***
+//	PARAMETERS		:	char buf()
+//	RETURN			:	N/A
+void clearCR(char buf[])
+{
+	// gets sent here from winner / loser if / else statements
+	char* whereCR = strchr(buf, '\n'); 
+	if (whereCR != NULL)
+	{
+		*whereCR = '\0';
+	}
+}
 
 
 //	FUNCTION		:	getNum()
