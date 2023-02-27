@@ -112,22 +112,40 @@ int	Recipe::SetInstructions(void)
 int Recipe::CreateNew(void)
 {
 	//	IO variables
-	char filename[PROMPTLENGTH] = { 0 };
+	char filename[INPUTLENGTH] = { 0 };
 	const char* extension = ".txt";
 	const char* permission = "w";
 	FILE* newRecipeFile = NULL;
-	IO io = IO();
+	int servingsNumber = 0;
 
 	//	Recipe variables
+	Recipe newRecipe;
+	char recipeName[INPUTLENGTH] = { 0 };
+	int servings = 0;
+	
 
 	//	Get name of new recipe from user 
 	printf("Please enter the name of your new recipe: ");
-	fgets(filename, PROMPTLENGTH, stdin);
-	clearCR(filename);
+	fgets(recipeName, INPUTLENGTH, stdin);
+	clearCR(recipeName);
 
 	//	Create a text file with that name
+	strcat(filename, recipeName);
 	strcat(filename, extension);
-	newRecipeFile = io.OpenFile(filename, permission);
+	newRecipeFile = OpenFile(filename, permission);
+
+	//	Get number of servings this recipe makes
+	printf("Please enter the amount of servings this recipe makes: ");
+	servingsNumber = scanf("%d", &servings);
+	if (servingsNumber > 1)
+	{
+		printf("Please only enter one integer.");
+	}
+	else if (servingsNumber < 1)
+	{
+		printf("Please enter a valid integer.");
+	}
+
 
 	//	Loop Ingredient Entry
 		//	Get the name of the ingredient from the user
@@ -136,7 +154,7 @@ int Recipe::CreateNew(void)
 		//	Write line to file in the format <name>,<amount>,<UOM>
 
 	// Close the text file
-	io.CloseFile(newRecipeFile);
+	CloseFile(newRecipeFile);
 
 	return 0;
 }
