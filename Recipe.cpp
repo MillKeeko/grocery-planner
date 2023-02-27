@@ -1,11 +1,12 @@
 //	FILE			:	Recipe.cpp
-//	PROJECT			:	Meal Planner
+//	PROJECT			:	Grocery List
 //	PROGRAMMER		:	William Anderson
 //	PROJECT START	:	2022-11-02
 //	FIRST VERSION	:	
 
 
 #include "general.h"
+#include "IO.h"
 #include "Recipe.h"
 
 
@@ -112,7 +113,9 @@ int Recipe::CreateNew(void)
 {
 	char filename[PROMPTLENGTH] = { 0 };
 	const char* extension = ".txt";
+	const char* permission = "w";
 	FILE* newRecipeFile = NULL;
+	IO io = IO();
 
 	//	Get name of new recipe from user 
 	printf("Please enter the name of your new recipe: ");
@@ -121,12 +124,7 @@ int Recipe::CreateNew(void)
 
 	//	Create a text file with that name
 	strcat(filename, extension);
-	newRecipeFile = fopen(filename, "w");
-	if (newRecipeFile == NULL)
-	{
-		printf("Can't open text file for writing.");
-		return -1;
-	}
+	newRecipeFile = io.OpenFile(filename, permission);
 
 	//	Loop Ingredient Entry
 		//	Get the name of the ingredient from the user
@@ -135,11 +133,7 @@ int Recipe::CreateNew(void)
 		//	Write line to file in the format <name>,<amount>,<UOM>
 
 	// Close the text file
-	if (fclose(newRecipeFile) != 0)
-	{
-		printf("Can't close text file opened for writing.\n");
-		return -1;
-	}
+	io.CloseFile(newRecipeFile);
 
 	return 0;
 }

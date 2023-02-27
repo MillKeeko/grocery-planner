@@ -1,5 +1,5 @@
 //	FILE			:	MealPlan.h
-//	PROJECT			:	Meal Planner
+//	PROJECT			:	Grocery List
 //	PROGRAMMER		:	William Anderson
 //	PROJECT START	:	2022-11-02
 //	FIRST VERSION	:

@@ -1,5 +1,5 @@
 //	FILE			:	general.h
-//	PROJECT			:	Meal Planner
+//	PROJECT			:	Grocery List
 //	PROGRAMMER		:	William Anderson
 //	PROJECT START	:	2022-11-02
 //	FIRST VERSION	:
@@ -10,7 +10,7 @@
 
 
 #define SUCCESS				0
-#define FAILUTE				-1
+#define FAILURE				-1
 #define PROMPTLENGTH			121
 
 
