@@ -16,6 +16,7 @@ class GroceryList
 private:
 	std::vector<Ingredient> items;
 public:
-
+	GroceryList(void);
+	~GroceryList(void);
 };
 

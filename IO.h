@@ -9,14 +9,7 @@
 
 #include <stdio.h>
 
-class IO
-{
-private:
-public:
-	IO(void);
-	~IO(void);
 
-	FILE*	OpenFile(char* filepath, const char* permission);
-	int		CloseFile(FILE* fp);
-};
+FILE*	OpenFile(char* filepath, const char* permission);
+int		CloseFile(FILE* fp);
 

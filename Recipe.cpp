@@ -111,11 +111,14 @@ int	Recipe::SetInstructions(void)
 //	RETURN			:	N/A
 int Recipe::CreateNew(void)
 {
+	//	IO variables
 	char filename[PROMPTLENGTH] = { 0 };
 	const char* extension = ".txt";
 	const char* permission = "w";
 	FILE* newRecipeFile = NULL;
 	IO io = IO();
+
+	//	Recipe variables
 
 	//	Get name of new recipe from user 
 	printf("Please enter the name of your new recipe: ");

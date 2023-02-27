@@ -9,32 +9,12 @@
 #include "IO.h"
 
 
-//  METHOD			:	IO()
-//	DESCRIPTION		:	A constructor.
-//	PARAMETERS		:	N/A
-//	RETURN			:	N/A
-IO::IO(void)
-{
-	
-}
-
-
-//  METHOD			:	~IO()
-//	DESCRIPTION		:	A destructor.
-//	PARAMETERS		:	N/A
-//	RETURN			:	N/A
-IO::~IO(void)
-{
-
-}
-
-
-//  METHOD			:	IO()
+//  METHOD			:	OpenFile()
 //	DESCRIPTION		:	This method opens a file and displays an 
 //						error if it can't.
 //	PARAMETERS		:	N/A
 //	RETURN			:	N/A
-FILE* IO::OpenFile(char* filepath, const char* permission)
+FILE* OpenFile(char* filepath, const char* permission)
 {
 	FILE* fp = NULL;
 	fp = fopen(filepath, permission);
@@ -46,16 +26,21 @@ FILE* IO::OpenFile(char* filepath, const char* permission)
 }
 
 
-//  METHOD			:	~IO()
+//  METHOD			:	CloseFile()
 //	DESCRIPTION		:	This method closes a file and displays an
 //						error if it can't.
 //	PARAMETERS		:	N/A
 //	RETURN			:	N/A
-int IO::CloseFile(FILE* fp)
+int CloseFile(FILE* fp)
 {
 	if (fclose(fp) != 0)
 	{
 		printf("Can't close file.\n");
 		return FAILURE;
 	}
+	else
+	{
+		return SUCCESS;
+	}
 }
+
