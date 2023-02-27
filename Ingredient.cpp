@@ -18,7 +18,7 @@ Ingredient::Ingredient(void)
 {
 	name = NULL;
 	uom = NULL;
-	amount = 0;
+	quantity = 0;
 	nameCopy = NULL;
 	uomCopy = NULL;
 	staple = NULL;
@@ -57,9 +57,9 @@ char* Ingredient::GetUOM(void)
 //	DESCRIPTION		:	This method is an accessor.
 //	PARAMETERS		:	N/A
 //	RETURN			:	N/A
-int	Ingredient::GetAmount(void)
+int	Ingredient::GetQuantity(void)
 {
-	return amount;
+	return quantity;
 }
 
 //  METHOD			:	Ingredient()
@@ -68,7 +68,7 @@ int	Ingredient::GetAmount(void)
 //	RETURN			:	N/A
 int	Ingredient::SetName(void)
 {
-
+	return 0;
 }
 
 //  METHOD			:	Ingredient()
@@ -77,15 +77,15 @@ int	Ingredient::SetName(void)
 //	RETURN			:	N/A
 int	Ingredient::SetUOM(void)
 {
-
+	return 0;
 }
 
 //  METHOD			:	SetAmount()
 //	DESCRIPTION		:	This method is a mutator.
 //	PARAMETERS		:	N/A
 //	RETURN			:	N/A
-int	Ingredient::SetAmount(void)
+int	Ingredient::SetQuantity(void)
 {
-
+	return 0;
 }
 

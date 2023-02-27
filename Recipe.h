@@ -6,14 +6,15 @@
 
 
 #include "Ingredient.h"
-
+#include <stdio.h>
+#include <string>
+#include <vector>
 
 #pragma once
 
 
 #define SUCCESS				0
 #define FAILUTE				-1
-#define MAXINGREDIENTS		25
 #define INPUTLENGTH			121
 
 
@@ -26,10 +27,12 @@ private:
 	//	Main data members
 	char*	name;
 	int		servings;
-	Ingredient ingredients[MAXINGREDIENTS];
+	std::vector<Ingredient>	ingredients;
+	char*	instructions;
 
 	//	Auxilliary data members
-	char* nameCopy;
+	char*	nameCopy;
+	char*	instructionsCopy;
 
 public:
 	//	Constructors
@@ -41,16 +44,15 @@ public:
 	//	Accessors
 	char*	GetName(void);
 	int		GetServings(void);
+	char*	GetInstructions(void);
 
 	//	Mutators
 	int		SetName(void);
 	int		SetServings(void);
+	int		SetInstructions(void);
 
 	//	Methods
-	
 	int		CreateNew(void);
-		
 	int		DisplayAll(void);
-		
 	int		ReadIngredients(char* recipeName);
 };

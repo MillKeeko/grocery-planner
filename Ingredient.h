@@ -4,8 +4,11 @@
 //	PROJECT START	:	2022-11-02
 //	FIRST VERSION	:
 
+
 #pragma once
 
+
+#pragma warning(disable: 4996)
 
 
 class Ingredient
@@ -14,7 +17,7 @@ private:
 	//	Main Data Members
 	char*	name;
 	char*	uom;			//	Unit of measurement
-	int		amount;		
+	int		quantity;		
 	bool	staple;
 
 	//	Auxiliary Data Members
@@ -31,14 +34,12 @@ public:
 	//	Accessors
 	char*	GetName(void);
 	char*	GetUOM(void);
-	int		GetAmount(void);
+	int		GetQuantity(void);
 
 	//	Mutators
 	int		SetName(void);
 	int		SetUOM(void);
-	int		SetAmount(void);
-
-
+	int		SetQuantity(void);
 
 	//	Overload the add and subtract operators to correctly add ingredient amounts
 };

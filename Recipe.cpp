@@ -2,16 +2,11 @@
 //	PROJECT			:	Meal Planner
 //	PROGRAMMER		:	William Anderson
 //	PROJECT START	:	2022-11-02
-//	FIRST VERSION	:
+//	FIRST VERSION	:	
 
 
 #include "general.h"
 #include "Recipe.h"
-#include <stdio.h>
-#include <string>
-
-
-using namespace std;
 
 
 //  METHOD			:	Recipe()
@@ -22,7 +17,10 @@ Recipe::Recipe(void)
 {
 	name = NULL;
 	nameCopy = NULL;
+	instructions = NULL;
+	instructionsCopy = NULL;
 	servings = 0;
+	ingredients;
 }
 
 
@@ -61,6 +59,17 @@ int Recipe::GetServings(void)
 }
 
 
+//  METHOD			:	GetInstructions()
+//	DESCRIPTION		:	An accessor for the instructions data member.
+//	PARAMETERS		:	N/A
+//	RETURN			:	
+char* Recipe::GetInstructions(void)
+{
+	strcpy(instructionsCopy, instructions);
+	return instructionsCopy;
+}
+
+
 //  METHOD			:	SetName()
 //	DESCRIPTION		:	Mutator for the name data member.
 //	PARAMETERS		:	N/A
@@ -79,6 +88,17 @@ int	Recipe::SetServings(void)
 {
 	return 0;
 }
+
+
+//  METHOD			:	SetInstructions()
+//	DESCRIPTION		:	Mutator for the instructions data member.
+//	PARAMETERS		:	N/A
+//	RETURN			:
+int	Recipe::SetInstructions(void)
+{
+	return 0;
+}
+
 
 
 //
